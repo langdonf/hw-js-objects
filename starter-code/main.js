@@ -10,15 +10,14 @@ var dog = {
 	makeNoise: function () {
 		console.log(this.noise);	
 	}
-
 };
+
 var cat = {
 	name: 'cat',
 	noise: 'meow',
 	makeNoise: function () {
 		console.log(this.noise);
 	}
-
 };
 
 var bird = {
@@ -49,8 +48,7 @@ var mouse = {
 var animals = [dog, cat, bird, mouse]
 
 animals.forEach(animal=> {
-	animal.makeNoise()
-	
+	animal.makeNoise()	
 });
 
 
@@ -66,7 +64,6 @@ animals.forEach(animal=> {
 */
 animals.forEach(animal=> {
 	animal.hunger = 10
-	
 });
 /*
 	Part 4: These animals should be able to walk. Let's add a new "walk" property to them.
@@ -88,7 +85,7 @@ animals.forEach(animal=> {
 */
 for (let i = 0; i < animals.length; i++) {
 	animals[i].walk = function(){
-		console.log(`${this.name} took a walk`);
+		console.log(`The ${this.name} took a walk`);
 		this.hunger--;
 	}
 }
@@ -176,3 +173,4 @@ for (let i = 0; i < animals.length; i++) {
 		document.querySelector('img', this.noise).setAttribute('src','images/' + this.name + '.jpg')
 	};
 }
+
